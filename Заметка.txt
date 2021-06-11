@@ -24,4 +24,12 @@ models.py - Отвечает за хранение данных в БД(Можн
 7)Чтобы запустить тестовый сервер нужно выполнить команду:
 manage.py runserver 5000 (Запустили сервер на 5000 порту)
 
-8)
+8)Дожно появится предупреждение(Что есть невыполненые миграции):
+    You have 14 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contentty
+    pes, sessions.
+    Run 'python manage.py migrate' to apply them.
+Нужно выполнить:
+manage.py migrate
+
+9)Нам нужно принять запос от браузера - пользователя к определенным страницам и передать его на обработку
+в функцию обработчик. Чтобы это сделать мы начинаем редактировать urls.py из папки blogengine.
