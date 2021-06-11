@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls import include
 
-from .views import hello #Создали файл views.py в папке blogengine, где определили функцию hello
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('blog/', hello) #Запросы по адресу blog будут обрабатываться функцией hello
+    path('blog/', include('blog.urls'))
 ]
